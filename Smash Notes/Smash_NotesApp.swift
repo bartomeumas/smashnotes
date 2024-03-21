@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct Smash_NotesApp: App {
+
     var body: some Scene {
         WindowGroup {
             ContentView()

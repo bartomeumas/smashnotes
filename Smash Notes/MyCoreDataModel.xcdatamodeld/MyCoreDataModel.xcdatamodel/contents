@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23E214" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="CharacterMO" representedClassName="CharacterMO" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="characterType" maxCount="1" deletionRule="Nullify" destinationEntity="CharacterTypeMO"/>
+    </entity>
+    <entity name="CharacterTypeMO" representedClassName="CharacterTypeMO" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CharacterMO"/>
+    </entity>
+    <entity name="HabitMO" representedClassName="HabitMO" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="habitType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HabitTypeMO"/>
+    </entity>
+    <entity name="HabitTypeMO" representedClassName="HabitTypeMO" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HabitMO"/>
+    </entity>
+    <entity name="NoteMO" representedClassName="NoteMO" syncable="YES" codeGenerationType="class">
+        <attribute name="extraDetails" optional="YES" attributeType="String" defaultValueString="&quot;&quot;"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="playerName" optional="YES" attributeType="String" defaultValueString="&quot;&quot;"/>
+        <attribute name="winCondition" optional="YES" attributeType="String" defaultValueString="&quot;&quot;"/>
+        <relationship name="habits" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="HabitMO"/>
+        <relationship name="mains" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CharacterMO"/>
+        <relationship name="stagesToBan" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StageMO"/>
+    </entity>
+    <entity name="StageMO" representedClassName="StageMO" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+    </entity>
+</model>

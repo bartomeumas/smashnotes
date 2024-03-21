@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  Smash Notes
+
+  Created by Bartomeu Mas Castillo on 9/11/23.
+  
+*/
+"Player name" = "Player name";
+"Mains" = "Mains";
+"Stages to ban" = "Stages to ban";
+"Habits" = "Habits";
+"Add new habits!" = "Add new habits!";
+"Win condition" = "Win condition";
+"Describe here your opponent's win condition" = "Describe here your opponent's win condition";
+"Other" = "Other";
+"Write here anything you'd like to remember" = "Write here anything you'd like to remember";
+"Write a habit" = "Write a habit";
+"Type" = "Type";
+"Search" = "Search";
+"Advantage" = "Advantage";
+"Neutral" = "Neutral";
+"Disadvantage" = "Disadvantage";
+"Under pressure" = "Under pressure";
+"Not specified" = "Not specified";
+"Click the + icon to start creating notes" = "Click the + icon to start creating notes";
+"Save changes" = "Save changes";
